@@ -13,19 +13,15 @@ class PokemonController {
         this.repository = repository;
     }
 
-    // Aggregate root
-
     @GetMapping("/pokemons")
-    List<Pokemon> all() {
+    List<Pokemon> getAllPokemon() {
         return repository.findAll();
     }
 
-    @PostMapping("/pokemons")
-    Pokemon newPokemon(@RequestBody Pokemon newEmployee) {
-        return repository.save(newEmployee);
+    @PostMapping("/pokemon")
+    Pokemon createPokemon(@RequestBody Pokemon newPokemon) {
+        return repository.save(newPokemon);
     }
-
-    // Single item
 
     @GetMapping("/pokemons/{id}")
     Pokemon one(@PathVariable Long id) {
@@ -34,17 +30,17 @@ class PokemonController {
                 .orElseThrow(() -> new PokemonNotFoundException(id));
     }
 
-    @PutMapping("/pokemons/{id}")
-    Pokemon replacePokemon(@RequestBody Pokemon newPokemon, @PathVariable Long id) {
 
-        return repository.findById(id)
-                .map(pokemon -> {
-                    pokemon.setName(newPokemon.getName());
-                    return repository.save(pokemon);
+    @PutMapping("/pokemon")
+    Pokemon updatePokemon(@RequestBody Pokemon pokemon) {
+        return repository.findById(pokemon.getId())
+                .map(poke -> {
+                    poke.setName(pokemon.getName());
+                    return repository.save(poke);
                 })
                 .orElseGet(() -> {
-                    newPokemon.setId(id);
-                    return repository.save(newPokemon);
+                    pokemon.setId(pokemon.getId());
+                    return repository.save(pokemon);
                 });
     }
 
