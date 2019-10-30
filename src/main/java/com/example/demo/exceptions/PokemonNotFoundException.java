@@ -1,7 +1,7 @@
-package com.example.demo;
+package com.example.demo.exceptions;
 
 public class PokemonNotFoundException extends RuntimeException {
-    PokemonNotFoundException(Long id) {
+    public PokemonNotFoundException(Long id) {
         super("Could not find Pokemon " + id);
     }
 }

@@ -1,4 +1,8 @@
-package com.example.demo;
+package com.example.demo.controller;
+import com.example.demo.exceptions.PokemonNameNotFoundException;
+import com.example.demo.exceptions.PokemonNotFoundException;
+import com.example.demo.PokemonRepository;
+import com.example.demo.model.Pokemon;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,6 +17,11 @@ class PokemonController {
         this.repository = repository;
     }
 
+    ///
+    // WEB SERVICES
+    ///
+
+
     @GetMapping("/pokemons")
     List<Pokemon> getAllPokemon() {
         return repository.findAll();
@@ -23,19 +32,31 @@ class PokemonController {
         return repository.save(newPokemon);
     }
 
-    @GetMapping("/pokemons/{id}")
-    Pokemon one(@PathVariable Long id) {
+    @GetMapping("/pokemon/{id}")
+    Pokemon getPokemonById(@PathVariable Long id) {
 
         return repository.findById(id)
                 .orElseThrow(() -> new PokemonNotFoundException(id));
     }
 
+//    @GetMapping("/pokemon/{name}")
+//    Pokemon getPokemonByName(@PathVariable String name) {
+//
+//        return repository.findByName(name)
+//                .orElseThrow(() -> new PokemonNameNotFoundException(name));
+//    }
 
     @PutMapping("/pokemon")
     Pokemon updatePokemon(@RequestBody Pokemon pokemon) {
         return repository.findById(pokemon.getId())
                 .map(poke -> {
                     poke.setName(pokemon.getName());
+                    poke.setTypes(pokemon.getTypes());
+                    poke.setHeight(pokemon.getHeight());
+                    poke.setWeight(pokemon.getWeight());
+                    poke.setMoves(pokemon.getMoves());
+                    poke.setImages(pokemon.getImages());
+                    poke.setStats(pokemon.getStats());
                     return repository.save(poke);
                 })
                 .orElseGet(() -> {
@@ -44,7 +65,7 @@ class PokemonController {
                 });
     }
 
-    @DeleteMapping("/pokemons/{id}")
+    @DeleteMapping("/pokemon/{id}")
     void deletePokemon(@PathVariable Long id) {
         repository.deleteById(id);
     }

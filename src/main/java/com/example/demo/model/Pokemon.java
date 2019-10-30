@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.model;
 
 import lombok.Data;
 
@@ -8,6 +8,7 @@ import javax.persistence.Id;
 
 @Data
 @Entity
+public
 class Pokemon {
 
     private @Id @GeneratedValue Long id;
