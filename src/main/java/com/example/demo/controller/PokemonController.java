@@ -54,7 +54,7 @@ class PokemonController {
                     poke.setTypes(pokemon.getTypes());
                     poke.setHeight(pokemon.getHeight());
                     poke.setWeight(pokemon.getWeight());
-                    poke.setMoves(pokemon.getMoves());
+                    poke.setAbilities(pokemon.getAbilities());
                     poke.setImages(pokemon.getImages());
                     poke.setStats(pokemon.getStats());
                     return repository.save(poke);
