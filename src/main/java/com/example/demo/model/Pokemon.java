@@ -2,43 +2,67 @@ package com.example.demo.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Data
+@Table(name = "Pokemon")
 @Entity
 public
 class Pokemon {
 
     private @Id @GeneratedValue Long id;
     private String name;
-    private String[] types;
-
-
-
     private float height;
     private float weight;
-    private String[] moves;
-    private String images;
-    private int[] stats;
 
-    public Pokemon(String name, String[] types, float height, float weight, String[] moves, String images, int[] stats) {
+    @Embedded
+    @OneToMany(
+            mappedBy = "types",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    @JoinColumn(name="types")
+    private Types types;
+
+    @Embedded
+    @OneToMany(
+            mappedBy = "abilities",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    @JoinColumn(name="abilities")
+
+    private Abilities abilities;
+
+    @Embedded
+    @OneToMany(
+            mappedBy = "images",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    @JoinColumn(name="images")
+
+    private Images images;
+
+    @Embedded
+    @OneToMany(
+            mappedBy = "stats",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    @JoinColumn(name="stats")
+
+    private Stats stats;
+
+    public Pokemon(String name, Types types, float height, float weight, Abilities abilities, Images images, Stats stats) {
         this.name = name;
         this.types = types;
         this.height = height;
         this.weight = weight;
-        this.moves = moves;
+        this.abilities = abilities;
         this.images = images;
         this.stats = stats;
     }
 
-    Pokemon() {}
-
-    Pokemon(String name, String[] types, int height, int weight, Object moves, String images, int[] stats) {
-        this.name = name;
-        this.types = types;
-    }
+    Pokemon(){}
 
     public Long getId() {
         return id;
@@ -54,14 +78,6 @@ class Pokemon {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String[] getTypes() {
-        return types;
-    }
-
-    public void setTypes(String[] types) {
-        this.types = types;
     }
 
     public float getHeight() {
@@ -80,27 +96,35 @@ class Pokemon {
         this.weight = weight;
     }
 
-    public String[] getMoves() {
-        return moves;
+    public Types getTypes() {
+        return types;
     }
 
-    public void setMoves(String[] moves) {
-        this.moves = moves;
+    public void setTypes(Types types) {
+        this.types = types;
     }
 
-    public String getImages() {
+    public Abilities getAbilities() {
+        return abilities;
+    }
+
+    public void setAbilities(Abilities abilities) {
+        this.abilities = abilities;
+    }
+
+    public Images getImages() {
         return images;
     }
 
-    public void setImages(String images) {
+    public void setImages(Images images) {
         this.images = images;
     }
 
-    public int[] getStats() {
+    public Stats getStats() {
         return stats;
     }
 
-    public void setStats(int[] stats) {
+    public void setStats(Stats stats) {
         this.stats = stats;
     }
 }
