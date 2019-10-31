@@ -1,13 +1,17 @@
 package com.example.demo.model;
 
 
-import javax.persistence.Embeddable;
-import javax.persistence.Entity;
+import lombok.Data;
+
+import javax.persistence.*;
 
 @Entity
-@Embeddable
-
+@Table(name="images")
 public class Images {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
+    private Long id;
     private String smallImage;
     private String largeImage;
 

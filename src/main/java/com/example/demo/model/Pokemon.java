@@ -2,31 +2,32 @@ package com.example.demo.model;
 
 import lombok.Data;
 
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Data
+@Table(name = "pokemons")
 @Entity
 public class Pokemon {
 
-    private @Id @GeneratedValue Long id;
+    private @Id @GeneratedValue(strategy = GenerationType.AUTO) @Column(name="id") Long id;
     private String name;
     private float height;
     private float weight;
 
 
-    @Embedded
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "types_id", referencedColumnName = "id")
     private Types types;
 
-    @Embedded
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "abilities_id", referencedColumnName = "id")
     private Abilities abilities;
 
-    @Embedded
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "images_id", referencedColumnName = "id")
     private Images images;
 
-    @Embedded
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "stats_id", referencedColumnName = "id")
     private Stats stats;
 
     public Pokemon(String name, Types types, float height, float weight, Abilities abilities, Images images, Stats stats) {
@@ -40,7 +41,6 @@ public class Pokemon {
     }
 
     Pokemon() {}
-
 
     public Long getId() {
         return id;

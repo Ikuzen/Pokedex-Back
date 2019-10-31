@@ -18,14 +18,15 @@ class LoadDatabase {
     @Bean
     CommandLineRunner initDatabase(PokemonRepository repository) {
         return args -> {
-            log.info("Preloading " + repository.save(
-                    new Pokemon("charmander",
-                            new Types("fire"),
-                            0.6f,
-                            (float) 8.5,
-                            new Abilities("solar-flare","fire"),
-                            new Images("image1","image2"),
-                            new Stats(10,20,10,10,20,10))));
+//            log.info("Preloading " + repository.save(
+//                    new Pokemon("charmander",
+//                            new Types("fire"),
+//                            0.6f,
+//                            (float) 8.5,
+//                            new Abilities("solar-flare","fire"),
+//                            new Images("image1","image2"),
+//                            new Stats(10,20,10,10,20,10))));
+//
         };
     };
 }

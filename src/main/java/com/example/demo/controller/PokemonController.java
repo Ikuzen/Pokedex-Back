@@ -32,12 +32,27 @@ class PokemonController {
         return repository.save(newPokemon);
     }
 
-    @GetMapping("/pokemon/{id}")
+    @GetMapping("/pokemon/{id://d+}")
     Pokemon getPokemonById(@PathVariable Long id) {
 
         return repository.findById(id)
                 .orElseThrow(() -> new PokemonNotFoundException(id));
     }
+
+    @GetMapping("/pokemon/{name}")
+    Pokemon getPokemonByName(@PathVariable String name) {
+
+        return repository.findByName(name);
+    }
+
+//    @GetMapping("/pokemon/{id}")
+//    Pokemon getPokemonAbilities(@PathVariable Long id){
+//        return repository.findById(id)
+//                .map(poke ->{
+//                    return repository.findByAbilities();
+//                })
+//                .orElseThrow(() -> new PokemonNotFoundException(id));
+//    }
 
 //    @GetMapping("/pokemon/{name}")
 //    Pokemon getPokemonByName(@PathVariable String name) {

@@ -1,12 +1,18 @@
 package com.example.demo.model;
 
 
-import javax.persistence.Embeddable;
-import javax.persistence.Entity;
+import lombok.Data;
+
+import javax.persistence.*;
 
 @Entity
-@Embeddable
+@Table(name="stats")
 public class Stats {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
+    private Long id;
+
     private int hp;
     private int atk;
     private int def;

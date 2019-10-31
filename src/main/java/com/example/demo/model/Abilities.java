@@ -1,12 +1,17 @@
 package com.example.demo.model;
 
-import javax.persistence.Embeddable;
-import javax.persistence.Entity;
+import lombok.Data;
+
+import javax.persistence.*;
 
 @Entity
-@Embeddable
-
+@Table(name="abilities")
 public class Abilities {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
+    private Long id;
+
 
     private String[] abilities;
 
@@ -21,6 +26,7 @@ public class Abilities {
     public void setAbilities(String[] abilities) {
         this.abilities = abilities;
     }
+
 
     Abilities(){}
 }
