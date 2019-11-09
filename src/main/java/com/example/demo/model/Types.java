@@ -16,6 +16,12 @@ public class Types {
 
     private String[] types;
 
+    public Types(String ... types) {
+        this.types = types;
+    }
+    Types(){}
+
+
     public String[] getTypes() {
         return types;
     }
@@ -23,9 +29,4 @@ public class Types {
     public void setTypes(String[] types) {
         this.types = types;
     }
-
-    public Types(String ... types) {
-        this.types = types;
-    }
-    Types(){}
 }

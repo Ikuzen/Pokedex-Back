@@ -9,10 +9,18 @@ import javax.persistence.*;
 public class Pokemon {
 
     private @Id @GeneratedValue(strategy = GenerationType.AUTO) @Column(name="id") Long id;
+    private int number;
     private String name;
     private float height;
     private float weight;
 
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "types_id", referencedColumnName = "id")
@@ -30,17 +38,6 @@ public class Pokemon {
     @JoinColumn(name = "stats_id", referencedColumnName = "id")
     private Stats stats;
 
-    public Pokemon(String name, Types types, float height, float weight, Abilities abilities, Images images, Stats stats) {
-        this.name = name;
-        this.types = types;
-        this.height = height;
-        this.weight = weight;
-        this.abilities = abilities;
-        this.images = images;
-        this.stats = stats;
-    }
-
-    Pokemon() {}
 
     public Long getId() {
         return id;

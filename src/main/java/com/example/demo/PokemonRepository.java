@@ -9,5 +9,6 @@ import java.util.Optional;
 public interface PokemonRepository extends JpaRepository<Pokemon, Long> {
 
     Pokemon findByName(String name);
-    List<Pokemon> findByAbilities(Abilities abilities);
+    Pokemon findByNumber(int number);
+    Pokemon findByAbilities(Abilities abilities);
 }

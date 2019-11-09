@@ -19,6 +19,7 @@ public class Abilities {
         this.abilities = abilities;
     }
 
+
     public String[] getAbilities() {
         return abilities;
     }
@@ -26,7 +27,6 @@ public class Abilities {
     public void setAbilities(String[] abilities) {
         this.abilities = abilities;
     }
-
 
     Abilities(){}
 }
