@@ -18,7 +18,9 @@ class PokemonController {
     PokemonController(PokemonRepository repository) {
         this.repository = repository;
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*", allowedHeaders = "*",allowCredentials= "true", methods = {RequestMethod.GET, RequestMethod.DELETE,RequestMethod.POST, RequestMethod.PUT}, maxAge=3600)
+
+
     ///
     // WEB SERVICES
     ///
