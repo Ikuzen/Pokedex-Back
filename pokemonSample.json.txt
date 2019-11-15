@@ -1,0 +1,315 @@
+[
+    {
+        "id": 15,
+        "number": 5,
+        "name": "charmeleon",
+        "height": 1.1,
+        "weight": 19.0,
+        "types": {
+            "types": [
+                "fire"
+            ]
+        },
+        "abilities": {
+            "abilities": [
+                "solar-power",
+                "blaze"
+            ]
+        },
+        "images": {
+            "smallImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+            "largeImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png"
+        },
+        "stats": {
+            "hp": 80,
+            "atk": 65,
+            "def": 80,
+            "spAtk": 58,
+            "spDef": 64,
+            "speed": 58,
+            "total": 405
+        }
+    },
+    {
+        "id": 34,
+        "number": 2,
+        "name": "ivysaur",
+        "height": 1.0,
+        "weight": 13.0,
+        "types": {
+            "types": [
+                "grass",
+                "poison"
+            ]
+        },
+        "abilities": {
+            "abilities": [
+                "chlorophyll",
+                "overgrow"
+            ]
+        },
+        "images": {
+            "smallImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+            "largeImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png"
+        },
+        "stats": {
+            "hp": 60,
+            "atk": 80,
+            "def": 80,
+            "spAtk": 63,
+            "spDef": 62,
+            "speed": 60,
+            "total": 405
+        }
+    },
+    {
+        "id": 47,
+        "number": 3,
+        "name": "venusaur",
+        "height": 2.0,
+        "weight": 100.0,
+        "types": {
+            "types": [
+                "grass",
+                "poison"
+            ]
+        },
+        "abilities": {
+            "abilities": [
+                "chlorophyll",
+                "overgrow"
+            ]
+        },
+        "images": {
+            "smallImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+            "largeImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png"
+        },
+        "stats": {
+            "hp": 80,
+            "atk": 100,
+            "def": 100,
+            "spAtk": 83,
+            "spDef": 83,
+            "speed": 80,
+            "total": 526
+        }
+    },
+    {
+        "id": 52,
+        "number": 7,
+        "name": "squirtle",
+        "height": 0.5,
+        "weight": 9.0,
+        "types": {
+            "types": [
+                "water"
+            ]
+        },
+        "abilities": {
+            "abilities": [
+                "rain-dish",
+                "torrent"
+            ]
+        },
+        "images": {
+            "smallImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+            "largeImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png"
+        },
+        "stats": {
+            "hp": 44,
+            "atk": 64,
+            "def": 50,
+            "spAtk": 65,
+            "spDef": 48,
+            "speed": 44,
+            "total": 315
+        }
+    },
+    {
+        "id": 67,
+        "number": 25,
+        "name": "pikachu",
+        "height": 0.4,
+        "weight": 6.0,
+        "types": {
+            "types": [
+                "electric"
+            ]
+        },
+        "abilities": {
+            "abilities": [
+                "lightning-rod",
+                "static"
+            ]
+        },
+        "images": {
+            "smallImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+            "largeImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25/back/7.png"
+        },
+        "stats": {
+            "hp": 35,
+            "atk": 55,
+            "def": 40,
+            "spAtk": 50,
+            "spDef": 50,
+            "speed": 90,
+            "total": 320
+        }
+    },
+    {
+        "id": 57,
+        "number": 8,
+        "name": "wartortle",
+        "height": 1.0,
+        "weight": 22.5,
+        "types": {
+            "types": [
+                "water"
+            ]
+        },
+        "abilities": {
+            "abilities": [
+                "rain-dish",
+                "torrent"
+            ]
+        },
+        "images": {
+            "smallImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+            "largeImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/8.png"
+        },
+        "stats": {
+            "hp": 59,
+            "atk": 63,
+            "def": 80,
+            "spAtk": 65,
+            "spDef": 80,
+            "speed": 58,
+            "total": 405
+        }
+    },
+    {
+        "id": 62,
+        "number": 9,
+        "name": "blastoise",
+        "height": 1.6,
+        "weight": 85.5,
+        "types": {
+            "types": [
+                "water"
+            ]
+        },
+        "abilities": {
+            "abilities": [
+                "rain-dish",
+                "torrent"
+            ]
+        },
+        "images": {
+            "smallImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+            "largeImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9/back.png"
+        },
+        "stats": {
+            "hp": 79,
+            "atk": 83,
+            "def": 100,
+            "spAtk": 85,
+            "spDef": 105,
+            "speed": 78,
+            "total": 530
+        }
+    },
+    {
+        "id": 6,
+        "number": 5,
+        "name": "charmander",
+        "height": 0.6,
+        "weight": 8.5,
+        "types": {
+            "types": [
+                "fire"
+            ]
+        },
+        "abilities": {
+            "abilities": [
+                "solar-power",
+                "blaze"
+            ]
+        },
+        "images": {
+            "smallImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+            "largeImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png"
+        },
+        "stats": {
+            "hp": 65,
+            "atk": 50,
+            "def": 60,
+            "spAtk": 43,
+            "spDef": 52,
+            "speed": 39,
+            "total": 309
+        }
+    },
+    {
+        "id": 24,
+        "number": 6,
+        "name": "charizard",
+        "height": 1.7,
+        "weight": 90.5,
+        "types": {
+            "types": [
+                "fire"
+            ]
+        },
+        "abilities": {
+            "abilities": [
+                "solar-power",
+                "blaze"
+            ]
+        },
+        "images": {
+            "smallImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+            "largeImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png"
+        },
+        "stats": {
+            "hp": 100,
+            "atk": 85,
+            "def": 109,
+            "spAtk": 78,
+            "spDef": 84,
+            "speed": 78,
+            "total": 534
+        }
+    },
+    {
+        "id": 29,
+        "number": 1,
+        "name": "bulbasaur",
+        "height": 0.7,
+        "weight": 6.9,
+        "types": {
+            "types": [
+                "grass",
+                "poison"
+            ]
+        },
+        "abilities": {
+            "abilities": [
+                "chlorophyll",
+                "overgrow"
+            ]
+        },
+        "images": {
+            "smallImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+            "largeImage": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
+        },
+        "stats": {
+            "hp": 45,
+            "atk": 65,
+            "def": 65,
+            "spAtk": 49,
+            "spDef": 49,
+            "speed": 45,
+            "total": 318
+        }
+    }
+]
